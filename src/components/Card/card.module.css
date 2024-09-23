@@ -1,0 +1,29 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--card-background);
+    justify-content: space-between;
+    text-align: center;
+    height: 428px;
+    width: 430px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 6px 2px #CCCCCC40;
+}
+
+.loader {
+    height: 100px;
+    width: 100px;
+    animation: spin-load 2 linear infinite;
+    display: block;
+    margin: auto auto;
+}
+
+@keyframes spin-load {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

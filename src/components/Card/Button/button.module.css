@@ -1,0 +1,14 @@
+.card__button {
+    border: #F4F4F4;
+    border-radius: 10px;
+
+    width: 173px;
+    height: 58px;
+    text-transform: uppercase;
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 27px;
+    background: #F4F4F4;
+    color: #717171;
+}

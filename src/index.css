@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  /* Background colors */
+  --app-background: #EEEEEE;
+  --app-header-background: #FFFFFF;
+  --card-header-background: #F6F6F6;
+  --card-background: #FFFFFF;
+  --button-background: #F4F4F4;
+
+  /* Text colors */
+  --text-basic: #717171;
+  --text-secondary: #919191;
+  --text-green: #3C7649;
+  --text-blue: #3684CB;
+  --text-red: #DD4B4B;
+
+  /* Altura do Header */
+  --height-header: 100px;
+  /* Estilo da borda para Card-Footer */
+  --border-footer-style: 0.5px solid #CCCCCC;
+  
+
+
+  font-family: 'Poppins', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.0;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {  
+  padding: var(--height-header) 0 0 0;
+  background-color: var(--app-background);
+  margin: 0;
+}
+
+.main-app {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  min-width: 537px;
+  /* max-width: 1920px; */
+  min-height: 1080px;
+  /* max-height: 1240px; */
+}

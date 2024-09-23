@@ -1,0 +1,21 @@
+.card__view-data{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column; 
+}
+
+.card__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    height: 199.48px;
+}
+
+.card__value {
+    font-size: 4rem;
+    font-weight: 500;
+    line-height: 6rem;
+    text-align: center;
+    word-spacing: -18px;
+}

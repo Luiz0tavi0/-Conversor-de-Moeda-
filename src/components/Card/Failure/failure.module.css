@@ -1,0 +1,21 @@
+.card__view-failure {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;     
+    height: 100%;            
+    text-align: center;      
+}
+.card__view-failure--title {
+    height: 60px;
+    width: 100%;
+    align-self: center;
+
+    margin: 0;
+    font-weight: 400;
+    font-size: 1.625rem;
+    line-height: 2.4375rem;
+    text-align: center; 
+    
+    color: #717171;
+}
