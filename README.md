@@ -2,6 +2,7 @@
 # Conversor de Moeda
 
 ## Visão Geral
+
 Este é um aplicativo web simples que converte moedas em tempo real. Ele foi desenvolvido utilizando **React** para a interface e está hospedado em um contêiner **Docker** com **Nginx** servindo os arquivos estáticos.
 
 ---
@@ -16,6 +17,7 @@ Certifique-se de ter estas ferramentas instaladas antes de seguir as instruçõe
 ---
 
 ## Variáveis de Ambiente
+
 Antes de iniciar, você precisará configurar as variáveis de ambiente. Crie um arquivo `.env` na raiz do projeto com as seguintes variáveis:
 
 ```bash
@@ -50,6 +52,10 @@ Abra o navegador e acesse:
 http://localhost
 ```
 
+ou
+
+[Site] (<https://currency-conversor-summer-feather-1268.fly.dev>)
+
 ---
 
 ## Como Usar
@@ -71,11 +77,12 @@ http://localhost
 ### Imagens do Projeto
 
 #### Desktop
-![Tela inicial do conversor in Desktop](./images/desktop.jpeg)
+
+[![Tela inicial do conversor in Desktop](./images/desktop.jpeg)](<https://currency-conversor-summer-feather-1268.fly.dev>)
 
 #### Mobile
-![Tela inicial do conversor in Mobile](./images/mobile.jpeg)
 
+[![Tela inicial do conversor in Mobile](./images/mobile.jpeg)](<https://currency-conversor-summer-feather-1268.fly.dev>)
 
 ---
 
