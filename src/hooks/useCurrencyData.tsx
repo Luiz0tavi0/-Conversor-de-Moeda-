@@ -1,11 +1,12 @@
 
 import { useQuery } from "@tanstack/react-query";
 import ICurrencyResponse from "../interfaces/currency-data";
-const API_URL = 'https://economia.awesomeapi.com.br/last'
 
 const fetchData = async (currencyPair: string): Promise<ICurrencyResponse> => {
   // await new Promise((resolve) => setTimeout(resolve, Math.random() * 10000));
-  const response = await fetch(`${API_URL}/${currencyPair}`, { method: 'GET' });
+  const response = await fetch(
+    `${process.env.URL_ECON_API}/${currencyPair}`, { method: 'GET' }
+  );
   const data = await response.json();
   return data as ICurrencyResponse;
 };
