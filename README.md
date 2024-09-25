@@ -1,50 +1,99 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Conversor de Moeda
 
-Currently, two official plugins are available:
+## Visão Geral
+Este é um aplicativo web simples que converte moedas em tempo real. Ele foi desenvolvido utilizando **React** para a interface e está hospedado em um contêiner **Docker** com **Nginx** servindo os arquivos estáticos.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## Pré-requisitos
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- [Docker](https://docs.docker.com/get-docker/)
+- [Docker Compose](https://docs.docker.com/compose/install/)
 
-- Configure the top-level `parserOptions` property like this:
+Certifique-se de ter estas ferramentas instaladas antes de seguir as instruções.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+---
+
+## Variáveis de Ambiente
+Antes de iniciar, você precisará configurar as variáveis de ambiente. Crie um arquivo `.env` na raiz do projeto com as seguintes variáveis:
+
+```bash
+REACT_APP_API_URL=https://api.exchangerate-api.com
+REACT_APP_API_KEY=sua-chave-api
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+---
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## Como Rodar o Projeto
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+### 1. Clonar o repositório
+
+```bash
+git clone git@github.com:Luiz0tavi0/Cotacao-de-Moeda.git
+cd Cotacao-de-Moeda
 ```
+
+### 2. Construir e rodar o contêiner Docker
+
+```bash
+docker-compose up --build
+```
+
+O comando acima irá criar e iniciar o contêiner Docker. O aplicativo estará disponível em `http://localhost`.
+
+### 3. Acessar o Aplicativo
+
+Abra o navegador e acesse:
+
+```bash
+http://localhost
+```
+
+---
+
+## Como Usar
+
+### Conversão de Moedas
+
+- A aplicação exibe a cotação de 3 moedas em relação ao real do Brasil (BRL).
+  - Dólar Canadense (CAD)
+  - Peso Argentino (ARS)
+  - Libra Esterlina (GBP)
+- Exibe a hora da última atualização.
+- Exibe a varição percentual da cotação atual.
+- A aplicação mantém em cache local os dados e os atualiza a cada 3 minutos.
+
+---
+
+## Demonstração
+
+### Imagens do Projeto
+
+#### Desktop
+![Tela inicial do conversor in Desktop](./images/desktop.jpeg)
+
+#### Mobile
+![Tela inicial do conversor in Mobile](./images/mobile.jpeg)
+
+
+---
+
+## Tecnologias Utilizadas
+
+- **React**: Biblioteca JavaScript para construir interfaces de usuário.
+- **Vite**: Ferramenta de build rápida para desenvolvimento frontend.
+- **Docker**: Containerização para facilitar o deploy e a execução do projeto.
+- **Nginx**: Servidor web para servir os arquivos estáticos do React.
+
+---
+
+## Contribuições
+
+Se você quiser contribuir com este projeto, fique à vontade para enviar um pull request. Qualquer melhoria ou correção de bugs será bem-vinda!
+
+---
+
+## Licença
+
+Este projeto está licenciado sob a [MIT License](https://github.com/Luiz0tavi0/-Conversor-de-Moeda-/blob/main/LICENSE).

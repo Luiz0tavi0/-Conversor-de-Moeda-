@@ -1,4 +1,6 @@
-.env
+*:Zone.Identifier
+*.env
+
 # Logs
 logs
 *.log

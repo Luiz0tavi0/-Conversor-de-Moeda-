@@ -4,7 +4,8 @@
     /* padding-top: 40px; */
     display: grid;
     gap: 30px;
-    grid-template-columns: 1fr; /* 1 coluna */    
+    grid-template-columns: 1fr;
+    /* 1 coluna */
     width: 100%;
     height: 100%;
     justify-items: center;
@@ -14,10 +15,15 @@
 
 @media (min-width: 1080px) {
     #main-section {
-        
         grid-template-columns: repeat(3, 1fr);
-        row-gap: 30px;
-        
+        /* row-gap: 30px; */
+    }
 
+}
+
+@media (max-width: 1080px) {
+    #main-section {
+        
+        padding-top: 100px;
     }
 }

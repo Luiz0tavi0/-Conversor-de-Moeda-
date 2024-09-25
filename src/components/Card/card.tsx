@@ -12,13 +12,13 @@ interface CardProps {
 }
 
 const Card = ({ currencyName, currencyPair }: CardProps) => {
-  const { data, isSuccess, isFetching, isError, refetch } = useCurrencyData(currencyPair);
+  const { data, isSuccess, isFetched, isLoadingError, isRefetching, isFetching, isError, refetch } = useCurrencyData(currencyPair);
   let currencyData: ICurrencyData | undefined;
 
   if (data && isSuccess)
     currencyData = data[currencyPair.replace('-', '')];
 
-
+  console.log({ data, isSuccess, isFetched, isLoadingError, isRefetching, isFetching, isError, refetch });
   return (
     <article className={style.card}>
       <Header currencyName={currencyName} />
